@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog"
 import Icon from "@/components/ui/icon"
 
 export default function Index() {
@@ -36,10 +37,55 @@ export default function Index() {
             и демонстрацией профессиональных техник от ведущих поваров страны
           </p>
           <div className="flex justify-center">
-            <Button size="lg" className="bg-culinary-orange hover:bg-culinary-orange/90 text-white px-8 py-3 text-lg" onClick={() => window.scrollTo({top: document.getElementById('courses')?.offsetTop, behavior: 'smooth'})}>
-              <Icon name="CreditCard" size={20} className="mr-2" />
-              Оплатить обучение
-            </Button>
+            <Dialog>
+              <DialogTrigger asChild>
+                <Button size="lg" className="bg-culinary-orange hover:bg-culinary-orange/90 text-white px-8 py-3 text-lg">
+                  <Icon name="CreditCard" size={20} className="mr-2" />
+                  Оплатить обучение
+                </Button>
+              </DialogTrigger>
+              <DialogContent className="max-w-md">
+                <DialogHeader>
+                  <DialogTitle className="font-display text-2xl text-culinary-gray mb-4">
+                    Реквизиты для пополнения счета
+                  </DialogTitle>
+                </DialogHeader>
+                <div className="space-y-4 text-sm">
+                  <div>
+                    <div className="font-semibold text-culinary-orange mb-1">Получатель:</div>
+                    <div>АО "ТБанк"</div>
+                  </div>
+                  <div>
+                    <div className="font-semibold text-culinary-orange mb-1">Номер счета:</div>
+                    <div className="font-mono bg-gray-50 p-2 rounded">30232810100000000004</div>
+                  </div>
+                  <div>
+                    <div className="font-semibold text-culinary-orange mb-1">Назначение платежа:</div>
+                    <div>Перевод средств по договору № 0431750789 Елисеев Андрей Эдуардович НДС не облагается</div>
+                  </div>
+                  <div>
+                    <div className="font-semibold text-culinary-orange mb-1">БИК:</div>
+                    <div className="font-mono bg-gray-50 p-2 rounded">044525974</div>
+                  </div>
+                  <div>
+                    <div className="font-semibold text-culinary-orange mb-1">Банк-получатель:</div>
+                    <div>АО "ТБанк"</div>
+                  </div>
+                  <div>
+                    <div className="font-semibold text-culinary-orange mb-1">Корр. счет:</div>
+                    <div className="font-mono bg-gray-50 p-2 rounded">30101810145250000974</div>
+                  </div>
+                  <div>
+                    <div className="font-semibold text-culinary-orange mb-1">ИНН при необходимости:</div>
+                    <div className="font-mono bg-gray-50 p-2 rounded">7710140679</div>
+                  </div>
+                  <div>
+                    <div className="font-semibold text-culinary-orange mb-1">КПП при необходимости:</div>
+                    <div className="font-mono bg-gray-50 p-2 rounded">771301001</div>
+                  </div>
+                </div>
+              </DialogContent>
+            </Dialog>
           </div>
           <div className="mt-12 grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-3xl mx-auto">
             <div className="text-center">
