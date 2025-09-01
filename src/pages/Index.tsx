@@ -36,9 +36,9 @@ export default function Index() {
             и демонстрацией профессиональных техник от ведущих поваров страны
           </p>
           <div className="flex justify-center">
-            <Button size="lg" className="bg-culinary-orange hover:bg-culinary-orange/90 text-white px-8 py-3 text-lg">
-              <Icon name="Play" size={20} className="mr-2" />
-              Смотреть курсы
+            <Button size="lg" className="bg-culinary-orange hover:bg-culinary-orange/90 text-white px-8 py-3 text-lg" onClick={() => window.scrollTo({top: document.getElementById('courses')?.offsetTop, behavior: 'smooth'})}>
+              <Icon name="CreditCard" size={20} className="mr-2" />
+              Оплатить обучение
             </Button>
           </div>
           <div className="mt-12 grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-3xl mx-auto">
