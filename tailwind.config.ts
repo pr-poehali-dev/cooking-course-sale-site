@@ -18,7 +18,17 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				'display': ['Playfair Display', 'serif'],
+				'sans': ['Open Sans', 'sans-serif'],
+			},
 			colors: {
+				'culinary': {
+					'orange': '#FF6B35',
+					'yellow': '#FFD700',
+					'gray': '#2F4F4F',
+					'cream': '#FFF8DC'
+				},
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
 				ring: 'hsl(var(--ring))',
